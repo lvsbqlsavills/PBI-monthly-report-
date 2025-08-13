@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Báo cáo Power BI</title>
+<style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    #report { display: none; }
+</style>
+<script>
+function checkPassword() {
+    var pass = document.getElementById("password").value;
+    if (pass === "Lvs@643") { // Mật khẩu bạn muốn
+        document.getElementById("login").style.display = "none";
+        document.getElementById("report").style.display = "block";
+    } else {
+        alert("Sai mật khẩu!");
+    }
+}
+</script>
+</head>
+<body>
+<div id="login">
+    <h2>Nhập mật khẩu để xem báo cáo</h2>
+    <input type="password" id="password" placeholder="Mật khẩu">
+    <button onclick="checkPassword()">Xác nhận</button>
+</div>
+
+<div id="report">
+    <h2>Báo cáo Power BI</h2>
+    <iframe title="Power BI Report" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNWUyZmRjNDMtMzUxYS00MDhlLWIzN2ItODQxYzE5OThkZjAwIiwidCI6IjE4MmVkZDhiLTQ5YjgtNGFmOC1iNWU0LWY5ZWRmMDhhZTk2NyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+</div>
+</body>
+</html>
